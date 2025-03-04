@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 41px 20px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &__navbar {
+    width: 100%;
+    max-width: 388px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 204px;
+    height: 20.12px;
+  }
+
+  &__burgerButton {
+    padding: 0;
+    top: 2px;
+    left: 363px;
+    background: none;
+    border: none;
+  }
+
+  &__burger-menu {
+    width: 25px;
+    height: 16px;
+    background: none;
+    border: none;
+  }
+
+  /* Меню */
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__menu-content a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__menu-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  &__sign-up {
+    background: #00ff99;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__login {
+    background: transparent;
+    border: 2px solid #00ff99;
+    color: #00ff99;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
