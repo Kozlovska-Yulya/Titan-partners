@@ -1,0 +1,38 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  gap: 15px;
+  margin-top: 40px;
+
+  &__button {
+    font-family: var(--font-helvetica);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &--affiliate {
+      background: transparent;
+      border: 1px solid #0f9d41;
+      color: #fff;
+    }
+
+    &--advertiser {
+      background: transparent;
+      border: 1px solid #0f9d41;
+      color: #fff;
+    }
+
+    &:hover {
+      background: radial-gradient(
+        99.14% 833.75% at 2.87% 37.5%,
+        #0f9d41 0%,
+        #17d75b 49.82%,
+        #0f9d41 100%
+      );
+    }
+  }
+}
