@@ -3,10 +3,9 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 
 export default function Home() {
   return (
-    <div>
+    <div className="firstBlock">
       <Header />
       <HeroSection />
-      <h1>Главная страница</h1>
     </div>
   );
 }

@@ -4,9 +4,6 @@
 :root {
   --font-jockey: 'Jockey One', sans-serif;
   --font-helvetica: 'Roboto', sans-serif;
-}
-
-:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -29,13 +26,9 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   justify-content: center;
-  font-family: 'Jockey One', sans-serif;
-}
-
-body {
+  font-family: var(--font-jockey);
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,4 +48,10 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.firstBlock {
+  width: 100vw;
+  min-height: 105vh;
+  background: url('/background.svg') no-repeat center/cover;
 }
