@@ -1,0 +1,13 @@
+.advantagesTitle {
+  font-family: var(--font-helvetica);
+  width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  text-align: center;
+  margin: 70px 0 19px;
+}
+.advantagesTitle__highlight {
+  color: #0f9d41;
+}/*# sourceMappingURL=AdvantagesTitle.module.css.map */

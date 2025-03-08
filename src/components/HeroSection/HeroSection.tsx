@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './HeroSection.module.scss';
-import Tags from '@/components/Tags/Tags';
-import Buttons from '@/components/Buttons/Buttons';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import Tags from '@/components/HeroSection/Tags/Tags';
+import Buttons from '@/components/HeroSection/Buttons/Buttons';
+import SocialIcons from './SocialIcons/SocialIcons';
 
 const HeroSection = () => {
   return (

@@ -1,0 +1,60 @@
+.geoMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-left: 8px;
+  margin-right: 20px;
+
+  &__title {
+    font-family: var(--font-helvetica);
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(
+      180deg,
+      #0f9d41 0%,
+      #17d75b 49.82%,
+      #0f9d41 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 388px;
+    height: 29px;
+  }
+
+  &__container {
+    position: relative;
+    // width: 100%;
+    // max-width: 400px;
+  }
+
+  &__svg {
+    width: 100%;
+    height: auto;
+  }
+
+  &__region {
+    fill: #444; // Серый цвет по умолчанию
+    transition: fill 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      fill: #0f9d41; // Зеленый цвет при наведении
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}

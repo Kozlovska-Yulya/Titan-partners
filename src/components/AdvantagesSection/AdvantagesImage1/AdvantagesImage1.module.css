@@ -1,0 +1,12 @@
+.advantagesImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.advantagesImage__img {
+  width: 323px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=AdvantagesImage1.module.css.map */

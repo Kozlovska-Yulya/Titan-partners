@@ -1,0 +1,35 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  margin-top: 40px;
+}
+.buttons__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-helvetica);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.buttons__button--affiliate {
+  background: transparent;
+  border: 1px solid #0f9d41;
+  color: #fff;
+  min-width: 170px;
+}
+.buttons__button--advertiser {
+  background: transparent;
+  border: 1px solid #0f9d41;
+  color: #fff;
+  min-width: 187px;
+}
+.buttons__button:hover {
+  background: radial-gradient(99.14% 833.75% at 2.87% 37.5%, #0f9d41 0%, #17d75b 49.82%, #0f9d41 100%);
+}/*# sourceMappingURL=Buttons.module.css.map */

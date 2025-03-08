@@ -1,0 +1,48 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: fit-content;
+  height: auto;
+  margin-top: 30px;
+
+  &__item {
+    font-family: var(--font-helvetica);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 35px;
+    gap: 8px;
+    padding: 14px 17.5px;
+    border: 1px solid #fff;
+    border-radius: 87.5px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: #fff;
+    width: fit-content;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: radial-gradient(
+        99.14% 833.75% at 2.87% 37.5%,
+        #0f9d41 0%,
+        #17d75b 49.82%,
+        #0f9d41 100%
+      );
+      border: none;
+      color: #fff;
+
+      .tags__icon {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease-in-out;
+  }
+}
