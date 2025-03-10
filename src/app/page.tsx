@@ -3,6 +3,8 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import AdvantagesSection from '@/components/AdvantagesSection/AdvantagesSection';
 import GeoMap from '@/components/GeoMap/GeoMap';
 import MediaBuying from '@/components/MediaBuying/MediaBuying';
+import Stats from '@/components/Stats/Stats';
+import Agency from '@/components/Agency/Agency';
 
 export default function Home() {
   return (
@@ -20,8 +22,12 @@ export default function Home() {
         <GeoMap />
       </div>
 
-      <div className="fourBlock">
+      <div className="fourthBlock">
         <MediaBuying />
+      </div>
+      <div className="fifthBlock">
+        <Stats />
+        <Agency />
       </div>
     </>
   );

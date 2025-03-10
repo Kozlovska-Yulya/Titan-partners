@@ -63,7 +63,12 @@ a {
   width: 399px;
   height: 409px;
 }
-.fourBlock {
+.fourthBlock {
   margin-top: 30px;
   width: 100vw;
+}
+
+.fifthBlock {
+  width: 100%;
+  height: 805px;
 }

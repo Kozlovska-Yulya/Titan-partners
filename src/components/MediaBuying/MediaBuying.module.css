@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
 }
+.mediaBuying .__image {
+  background-size: cover;
+}
 .mediaBuying__title {
   font-family: var(--font-helvetica);
   font-weight: 700;

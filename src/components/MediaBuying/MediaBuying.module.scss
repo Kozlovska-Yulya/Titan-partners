@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
 
+  .__image {
+    background-size: cover;
+  }
   &__title {
     font-family: var(--font-helvetica);
     font-weight: 700;
