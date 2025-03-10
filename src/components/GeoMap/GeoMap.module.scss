@@ -26,23 +26,23 @@
 
   &__container {
     position: relative;
-    // width: 100%;
-    // max-width: 400px;
+    width: 400px;
+    height: 300px;
   }
 
-  &__svg {
+  &__image {
     width: 100%;
     height: auto;
   }
 
   &__region {
-    fill: #444; // Серый цвет по умолчанию
-    transition: fill 0.3s ease-in-out;
+    fill: transparent;
     cursor: pointer;
+    transition: fill 0.3s ease-in-out;
+  }
 
-    &:hover {
-      fill: #0f9d41; // Зеленый цвет при наведении
-    }
+  &__region:hover {
+    fill: #0f9d41; /* Зеленая подсветка при наведении */
   }
 
   &__info {

@@ -1,0 +1,31 @@
+.mediaBuying {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mediaBuying__title {
+  font-family: var(--font-helvetica);
+  font-weight: 700;
+  font-size: 25px;
+  color: #fff;
+  margin-top: 50px;
+  text-align: center;
+}
+.mediaBuying__list {
+  margin: 30px 20px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mediaBuying__item {
+  display: flex;
+  gap: 15px;
+}
+.mediaBuying__text {
+  font-family: var(--font-helvetica);
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 400;
+}/*# sourceMappingURL=MediaBuying.module.css.map */

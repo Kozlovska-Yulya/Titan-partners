@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .geoMap {
   display: flex;
   flex-direction: column;
@@ -20,18 +21,20 @@
 }
 .geoMap__container {
   position: relative;
+  width: 400px;
+  height: 300px;
 }
-.geoMap__svg {
+.geoMap__image {
   width: 100%;
   height: auto;
 }
 .geoMap__region {
-  fill: #444;
-  transition: fill 0.3s ease-in-out;
+  fill: transparent;
   cursor: pointer;
+  transition: fill 0.3s ease-in-out;
 }
 .geoMap__region:hover {
-  fill: #0f9d41;
+  fill: #0f9d41; /* Зеленая подсветка при наведении */
 }
 .geoMap__info {
   position: absolute;
