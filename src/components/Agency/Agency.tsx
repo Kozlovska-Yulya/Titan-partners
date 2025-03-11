@@ -20,8 +20,8 @@ const Agency = () => {
             <Image
               src="/plus-icon.svg"
               alt="Plus Icon"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
               className={styles.agency__icon}
             />
             <p className={styles.agency__text}>{feature}</p>

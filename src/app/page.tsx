@@ -5,6 +5,8 @@ import GeoMap from '@/components/GeoMap/GeoMap';
 import MediaBuying from '@/components/MediaBuying/MediaBuying';
 import Stats from '@/components/Stats/Stats';
 import Agency from '@/components/Agency/Agency';
+import Discount from '@/components/Discount/Discount';
+import TitanGroup from '@/components/TitanGroup/TitanGroup';
 
 export default function Home() {
   return (
@@ -28,6 +30,13 @@ export default function Home() {
       <div className="fifthBlock">
         <Stats />
         <Agency />
+      </div>
+
+      <div className="sixthBlock">
+        <Discount />
+      </div>
+      <div className="seventhBlock">
+        <TitanGroup />
       </div>
     </>
   );

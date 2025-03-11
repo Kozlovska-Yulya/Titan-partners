@@ -31,7 +31,7 @@ const MediaBuying = () => {
         {features.map((feature, index) => (
           <li key={index} className={styles.mediaBuying__item}>
             <Image
-              src="/media-icon.svg"
+              src="/plus-icon.svg"
               alt="Plus Icon"
               width={50}
               height={50}

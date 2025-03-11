@@ -1,0 +1,39 @@
+.titanGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.titanGroup__track {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: marquee 20s linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+}
+.titanGroup__track span {
+  font-family: var(--font-jaro);
+  font-size: 103px;
+  font-weight: 400;
+  line-height: 92px;
+  letter-spacing: 0;
+  text-align: center;
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}/*# sourceMappingURL=TitanGroup.module.css.map */
