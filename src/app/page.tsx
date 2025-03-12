@@ -7,6 +7,7 @@ import Stats from '@/components/Stats/Stats';
 import Agency from '@/components/Agency/Agency';
 import Discount from '@/components/Discount/Discount';
 import TitanGroup from '@/components/TitanGroup/TitanGroup';
+import Partners from '@/components/Partners/Partners';
 
 export default function Home() {
   return (
@@ -37,6 +38,10 @@ export default function Home() {
       </div>
       <div className="seventhBlock">
         <TitanGroup />
+      </div>
+
+      <div className="eighthBlock">
+        <Partners />
       </div>
     </>
   );

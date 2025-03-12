@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 50px 0;
+  padding-top: 50px;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -15,6 +15,7 @@
     gap: 50px; // Расстояние между повторяющимся текстом
     animation: marquee 20s linear infinite;
     width: max-content;
+    // padding-top: 110px;
 
     & span {
       font-family: var(--font-jaro);
