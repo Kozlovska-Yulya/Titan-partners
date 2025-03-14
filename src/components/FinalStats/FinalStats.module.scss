@@ -1,0 +1,60 @@
+.finalStats {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 70px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 338px;
+  }
+
+  &__card {
+    position: relative;
+    padding: 20px;
+    height: 135px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #17d75b;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(23, 215, 91, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__value {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(#0f9d41, #17d75b, #0f9d41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 50px;
+  }
+
+  &__text {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 14px;
+    height: 14px;
+  }
+}

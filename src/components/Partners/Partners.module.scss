@@ -23,7 +23,7 @@
 
   &__track {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     justify-content: flex-start;
     transition: transform 0.8s ease-in-out;
   }
@@ -64,3 +64,12 @@
     }
   }
 }
+
+// @keyframes marquee {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(-50%);
+//   }
+// }

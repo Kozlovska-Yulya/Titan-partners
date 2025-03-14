@@ -52,7 +52,11 @@ a {
 
 .firstBlock {
   width: 100%;
-  height: 890px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: url('/background.svg') no-repeat center/cover;
 }
 
@@ -78,11 +82,15 @@ a {
   align-items: center;
 }
 
-.sixBlock {
+.sixthBlock {
   width: 100%;
   height: 700px;
 }
 
 .seventhBlock {
+  width: 100%;
+}
+
+.eighthBlock {
   width: 100%;
 }

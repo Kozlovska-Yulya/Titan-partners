@@ -8,6 +8,11 @@
   text-align: center;
   margin: 70px 0 19px;
 
+  @media (min-width: 1440px) {
+    font-size: 50px;
+    margin-bottom: 50px; // Пространство между заголовком и контентом
+  }
+
   &__highlight {
     color: #0f9d41;
   }

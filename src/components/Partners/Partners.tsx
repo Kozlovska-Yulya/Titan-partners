@@ -23,7 +23,7 @@ const Partners = () => {
       <div className={styles.partners__carousel}>
         <div
           className={styles.partners__track}
-          style={{ transform: `translateX(-${currentIndex * (120 + 30)}px)` }} // Учет gap между элементами
+          style={{ transform: `translateX(-${currentIndex * (120 + 40)}px)` }} // Учет gap между элементами
         >
           {partners.map((logo, index) => {
             const isActive = index === currentIndex + 1;

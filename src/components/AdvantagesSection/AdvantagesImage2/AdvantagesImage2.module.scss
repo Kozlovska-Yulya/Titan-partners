@@ -1,12 +1,21 @@
-.advantagesImage2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+.advantagesImage2__img {
+  width: 388px;
+  height: 247px;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
-  &__img {
-    width: 388px;
-    height: 247px;
-    object-fit: cover;
+  @media (min-width: 1440px) {
+    width: 523px;
+    height: 421px;
   }
 }
+// }

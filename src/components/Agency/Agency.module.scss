@@ -22,6 +22,11 @@
   &__item {
     display: flex;
     gap: 15px;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(23, 215, 91, 0.5);
+    }
   }
 
   &__text {

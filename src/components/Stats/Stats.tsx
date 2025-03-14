@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styles from './Stats.module.scss';
 
 const statsData = [
@@ -12,6 +13,7 @@ const statsData = [
 const Stats = () => {
   return (
     <div className={styles.stats}>
+      {/* Декорации */}
       <div className={styles.stats__decorations}>
         <Image
           src="/decor-left.svg"
@@ -31,10 +33,23 @@ const Stats = () => {
         />
       </div>
 
+      {/* Карточки */}
       {statsData.map((stat, index) => (
-        <div key={index} className={styles.stats__item}>
+        <motion.div
+          key={index}
+          className={styles.stats__item}
+          initial={{ opacity: 0, y: 50, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
+        >
           <div className={styles.stats__content}>
-            <span className={styles.stats__value}>{stat.value}</span>
+            <motion.span
+              className={styles.stats__value}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              {stat.value}
+            </motion.span>
             <p className={styles.stats__text}>{stat.text}</p>
           </div>
           <Image
@@ -44,7 +59,7 @@ const Stats = () => {
             height={14}
             className={styles.stats__arrow}
           />
-        </div>
+        </motion.div>
       ))}
     </div>
   );

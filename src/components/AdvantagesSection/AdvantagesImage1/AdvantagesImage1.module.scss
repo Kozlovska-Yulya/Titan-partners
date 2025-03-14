@@ -1,12 +1,10 @@
-.advantagesImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+.advantagesImage__img {
+  width: 323px;
+  height: 260px;
+  object-fit: cover;
 
-  &__img {
-    width: 323px;
-    height: 260px;
-    object-fit: cover;
+  @media (min-width: 1440px) {
+    width: 523px;
+    height: 421px;
   }
 }

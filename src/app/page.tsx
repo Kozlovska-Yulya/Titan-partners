@@ -8,6 +8,8 @@ import Agency from '@/components/Agency/Agency';
 import Discount from '@/components/Discount/Discount';
 import TitanGroup from '@/components/TitanGroup/TitanGroup';
 import Partners from '@/components/Partners/Partners';
+import FinalStats from '@/components/FinalStats/FinalStats';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   return (
@@ -35,14 +37,20 @@ export default function Home() {
 
       <div className="sixthBlock">
         <Discount />
-      </div>
-      <div className="seventhBlock">
         <TitanGroup />
       </div>
 
-      <div className="eighthBlock">
+      <div className="seventhBlock">
         <Partners />
       </div>
+
+      <div className="eighthBlock">
+        <FinalStats />
+      </div>
+
+      <footer className="footerBlock">
+        <Footer />
+      </footer>
     </>
   );
 }

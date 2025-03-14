@@ -12,8 +12,7 @@ const features = [
 
 const MediaBuying = () => {
   return (
-    <div className={styles.mediaBuying}>
-      {/* Изображение */}
+    <div id="own-media-buying" className={styles.mediaBuying}>
       <Image
         src="/media-buying.svg"
         alt="Media Buying"
@@ -22,11 +21,7 @@ const MediaBuying = () => {
         className={styles.mediaBuying__image}
         priority
       />
-
-      {/* Заголовок */}
       <h3 className={styles.mediaBuying__title}>Own media buying</h3>
-
-      {/* Список преимуществ */}
       <ul className={styles.mediaBuying__list}>
         {features.map((feature, index) => (
           <li key={index} className={styles.mediaBuying__item}>

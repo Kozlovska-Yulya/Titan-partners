@@ -1,5 +1,4 @@
 .titanGroup {
-  // height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,10 +11,9 @@
   &__track {
     display: flex;
     align-items: center;
-    gap: 50px; // Расстояние между повторяющимся текстом
+    gap: 50px;
     animation: marquee 20s linear infinite;
     width: max-content;
-    // padding-top: 110px;
 
     & span {
       font-family: var(--font-jaro);
@@ -26,7 +24,7 @@
       text-align: center;
       color: transparent;
       text-transform: uppercase;
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3); // Контур белого цвета
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
       white-space: nowrap;
     }
   }

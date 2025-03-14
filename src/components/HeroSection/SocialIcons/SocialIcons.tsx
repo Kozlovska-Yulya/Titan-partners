@@ -1,27 +1,34 @@
+'use client';
 import React from 'react';
-import styles from './SocialIcons.module.scss';
 import Image from 'next/image';
+import styles from './SocialIcons.module.scss';
 
 const socialLinks = [
-  { icon: '/instagram.svg', alt: 'Instagram', link: '#' },
-  { icon: '/linkedin.svg', alt: 'LinkedIn', link: '#' },
-  { icon: '/telegram1.svg', alt: 'Telegram', link: '#' },
+  {
+    icon: '/instagram.svg',
+    alt: 'Instagram',
+    href: 'https://titanpartners.io/',
+  },
+  { icon: '/linkedin.svg', alt: 'LinkedIn', href: 'https://titanpartners.io/' },
+  {
+    icon: '/telegram1.svg',
+    alt: 'Telegram',
+    href: ' https://t.me//titanpartners',
+  },
 ];
 
-const SocialIcons: React.FC = () => {
+const SocialIcons = () => {
   return (
     <div className={styles.socialIcons}>
       {socialLinks.map((social, index) => (
         <a
           key={index}
-          href={social.link}
+          href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.socialIcons__item}
+          className={styles.socialIcons__link}
         >
-          <div className={styles.socialIcons__circle}>
-            <Image src={social.icon} alt={social.alt} width={40} height={40} />
-          </div>
+          <Image src={social.icon} alt={social.alt} width={24} height={24} />
         </a>
       ))}
     </div>

@@ -12,7 +12,7 @@ const agencyFeatures = [
 
 const Agency = () => {
   return (
-    <section className={styles.agency}>
+    <section id="seo-agency" className={styles.agency}>
       <h3 className={styles.agency__title}>Seo Agency</h3>
       <ul className={styles.agency__list}>
         {agencyFeatures.map((feature, index) => (

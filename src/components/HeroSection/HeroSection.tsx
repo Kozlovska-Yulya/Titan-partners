@@ -7,7 +7,7 @@ import SocialIcons from './SocialIcons/SocialIcons';
 
 const HeroSection = () => {
   return (
-    <section className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection}>
       <div className={styles.heroSection__imageContainer}>
         <Image
           src="/titanium.svg"

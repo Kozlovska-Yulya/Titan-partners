@@ -15,7 +15,7 @@ const benefits = [
 
 const AdvertiserBenefits = () => {
   return (
-    <div className={styles.advertiserBenefits}>
+    <section id="for-advertisers" className={styles.advertiserBenefits}>
       <h3 className={styles.advertiserBenefits__title}>For Advertisers</h3>
       <ul className={styles.advertiserBenefits__list}>
         {benefits.map((benefit, index) => (
@@ -40,7 +40,7 @@ const AdvertiserBenefits = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

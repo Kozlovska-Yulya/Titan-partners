@@ -10,10 +10,19 @@ const AdvantagesSection = () => {
   return (
     <section className={styles.advantagesSection}>
       <AdvantagesTitle />
-      <AdvantagesImage1 />
-      <AffiliateBenefits />
-      <AdvantagesImage2 />
-      <AdvertiserBenefits />
+
+      {/* Картинка слева, список справа */}
+      <div className={styles.advantagesContent}>
+        <AdvantagesImage1 />
+        <AffiliateBenefits />
+      </div>
+
+      <div
+        className={`${styles.advantagesContent} ${styles.advantagesContentReversed} ${styles.advantagesContentReversedMobile}`}
+      >
+        <AdvertiserBenefits />
+        <AdvantagesImage2 />
+      </div>
     </section>
   );
 };
