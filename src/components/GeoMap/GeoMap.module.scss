@@ -26,6 +26,7 @@
     @media (min-width: 1440px) {
       font-size: 50px;
       height: 51px;
+      line-height: 121%;
     }
   }
 
@@ -36,6 +37,7 @@
     justify-content: center;
     width: 400px;
     height: 300px;
+    margin: 0;
 
     @media (min-width: 1440px) {
       width: 1440px;
