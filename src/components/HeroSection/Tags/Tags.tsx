@@ -44,13 +44,25 @@ const Tags: React.FC = () => {
       {tags.map((tag, index) =>
         tag.href ? (
           <a key={index} href={tag.href} className={styles.tags__item}>
-            <Image src={tag.icon} alt={tag.label} width={20} height={20} />
-            <span className={styles.tags__label}>{tag.label}</span>
+            <Image
+              src={tag.icon}
+              alt={tag.label}
+              width={20}
+              height={20}
+              className={styles.tags__icon}
+            />
+            <span>{tag.label}</span>
           </a>
         ) : (
           <div key={index} className={styles.tags__item}>
-            <Image src={tag.icon} alt={tag.label} width={20} height={20} />
-            <span className={styles.tags__label}>{tag.label}</span>
+            <Image
+              src={tag.icon}
+              alt={tag.label}
+              width={20}
+              height={20}
+              className={styles.tags__icon}
+            />
+            <span>{tag.label}</span>
           </div>
         )
       )}
