@@ -3,9 +3,71 @@
   flex-direction: column;
   align-items: center;
 
-  &__image {
-    background-size: cover;
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 160px;
   }
+
+  &__imageWrapper {
+    position: relative;
+    max-width: 850px;
+  }
+
+  .mobileImage {
+    display: block;
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  .desktopImage {
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: block;
+      width: 100vw;
+      height: 100%;
+    }
+  }
+
+  &__decorSmall {
+    position: absolute;
+    top: 140px;
+    left: 1650px;
+    width: 48px;
+    height: 53px;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+  &__decorBig {
+    position: absolute;
+    top: -30px;
+    left: 1568px;
+    width: 140px;
+    height: 105px;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1440px) {
+      margin: 0;
+      margin-top: 187px;
+    }
+  }
+
   &__title {
     font-family: var(--font-helvetica);
     font-weight: 700;
@@ -13,6 +75,12 @@
     color: #fff;
     margin-top: 50px;
     text-align: center;
+
+    @media (min-width: 1440px) {
+      font-size: 50px;
+      margin: 0;
+      text-align: left;
+    }
   }
 
   &__list {
@@ -20,15 +88,37 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (min-width: 1440px) {
+      max-width: 680px;
+      // width: 100%;
+      margin: 0;
+      margin-top: 30px;
+      gap: 23px;
+    }
   }
 
   &__item {
     display: flex;
     gap: 15px;
 
+    @media (min-width: 1440px) {
+      gap: 20px;
+    }
+
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 20px rgba(23, 215, 91, 0.5);
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+
+    @media (min-width: 1440px) {
+      width: 60px;
+      height: 60px;
     }
   }
 
@@ -39,5 +129,10 @@
     line-height: 26px;
     color: #fff;
     font-weight: 400;
+
+    @media (min-width: 1440px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
