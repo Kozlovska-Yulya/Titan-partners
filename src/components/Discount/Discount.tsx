@@ -12,20 +12,31 @@ const discountData = [
   { partner: 'IndiGo', discount: '100%', link: '#' },
 ];
 
-const extendedData = [...discountData, ...discountData];
-
 const Discount = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 1440);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (isDesktop) return; // Остановить авто-слайд на десктопе
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === discountData.length ? 0 : prevIndex + 1
+        prevIndex === discountData.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isDesktop]);
 
   return (
     <section className={styles.discount}>
@@ -37,10 +48,10 @@ const Discount = () => {
       <div className={styles.discount__carousel}>
         <motion.div
           className={styles.discount__track}
-          animate={{ x: `-${currentIndex * 100}px` }}
+          animate={isDesktop ? {} : { x: `-${currentIndex * 220}px` }}
           transition={{ duration: 0.8, ease: 'easeInOut' }}
         >
-          {extendedData.map((item, index) => (
+          {discountData.map((item, index) => (
             <div key={index} className={styles.discount__card}>
               <Image
                 src="/mask-group.svg"
@@ -65,14 +76,16 @@ const Discount = () => {
         </motion.div>
       </div>
 
-      <div className={styles.discount__dots}>
-        {discountData.map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.discount__dot} ${index === currentIndex ? styles.active : ''}`}
-          />
-        ))}
-      </div>
+      {!isDesktop && (
+        <div className={styles.discount__dots}>
+          {discountData.map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.discount__dot} ${index === currentIndex ? styles.active : ''}`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };
