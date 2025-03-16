@@ -24,8 +24,11 @@
     justify-content: center;
 
     @media (min-width: 1440px) {
-      font-size: 42px;
+      font-size: 50px;
       margin-bottom: 50px;
+      max-width: 100%;
+      white-space: normal;
+      display: inline-block;
     }
   }
 
@@ -40,6 +43,10 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media (min-width: 1440px) {
+      font-size: 50px;
+    }
   }
 
   &__carousel {
@@ -61,7 +68,7 @@
 
     @media (min-width: 1440px) {
       display: grid;
-      grid-template-columns: repeat(5, 1fr); // Размещаем карточки в 1 ряд
+      grid-template-columns: repeat(5, 1fr);
       gap: 20px;
       justify-content: center;
     }
@@ -86,7 +93,7 @@
     background: url('/backgr-discount.svg');
 
     @media (min-width: 1440px) {
-      width: 268px;
+      width: 260px;
       height: 400px;
     }
 
@@ -173,7 +180,7 @@
     margin-top: 30px;
 
     @media (min-width: 1440px) {
-      display: none; // Отключаем точки на больших экранах
+      display: none;
     }
   }
 
