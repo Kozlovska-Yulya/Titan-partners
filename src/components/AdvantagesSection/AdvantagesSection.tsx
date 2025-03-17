@@ -11,7 +11,6 @@ const AdvantagesSection = () => {
     <section className={styles.advantagesSection}>
       <AdvantagesTitle />
 
-      {/* Картинка слева, список справа */}
       <div className={styles.advantagesContent}>
         <AdvantagesImage1 />
         <AffiliateBenefits />

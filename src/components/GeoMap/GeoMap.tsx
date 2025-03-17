@@ -15,10 +15,8 @@ const GeoMap = () => {
           viewBox="0 0 800 450"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Фоновая карта (темно-серая) */}
           <image href="/map1.svg" width="100%" height="100%" />
 
-          {/* Навешиваем события на регионы */}
           <g
             onMouseEnter={(e) => setActiveRegion(e.currentTarget.id)}
             onMouseLeave={() => setActiveRegion(null)}
@@ -33,7 +31,6 @@ const GeoMap = () => {
         </svg>
       </div>
 
-      {/* Блок с информацией о регионе */}
       {activeRegion && (
         <div className={styles.geoMap__info}>{activeRegion}</div>
       )}

@@ -24,8 +24,8 @@
     z-index: 1;
 
     &:hover {
-      transform: scale(1.2); // Увеличиваем иконку
-      z-index: 10; // Поднимаем её на передний план
+      transform: scale(1.2);
+      z-index: 10;
     }
   }
 

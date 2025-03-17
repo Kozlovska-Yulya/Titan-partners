@@ -27,7 +27,7 @@ const Discount = () => {
   }, []);
 
   useEffect(() => {
-    if (isDesktop) return; // Остановить авто-слайд на десктопе
+    if (isDesktop) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
