@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -10,16 +11,22 @@ const Footer = () => {
 
       {/* Логотип */}
       <div className={styles.footer__logo}>
-        <Image
-          src="/logo.svg"
-          alt="Titan Partners Logo"
-          width={204}
-          height={20}
-          priority
-        />
+        <Link
+          href="https://titanpartners.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/logo.svg"
+            alt="Titan Partners Logo"
+            width={204}
+            height={20}
+            priority
+            className={styles.footer__logo}
+          />
+        </Link>
       </div>
 
-      {/* Контактная информация */}
       <div className={styles.footer__info}>
         <div className={styles.footer__email}>
           <Image src="/email.svg" alt="Email" width={24} height={24} />

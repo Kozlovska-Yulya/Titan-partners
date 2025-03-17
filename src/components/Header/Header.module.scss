@@ -2,19 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 41px;
   width: 100%;
   padding: 0 20px 19px;
   top: 0;
   left: 0;
   z-index: 1000;
 
-  @media (min-width: 1024px) {
-    padding: 30px 60px;
+  @media (min-width: 1440px) {
     max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &__navbar {
@@ -24,54 +20,43 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       max-width: 1440px;
-      width: 100%;
       display: flex;
-      justify-content: flex-start;
       align-items: center;
-      gap: 60px;
     }
   }
 
   &__logo {
     width: 204px;
     height: 20.12px;
+
+    @media (min-width: 1440px) {
+      width: 320px;
+      height: 31px;
+    }
   }
 
   &__burgerButton {
+    display: flex;
     padding: 0;
-    top: 2px;
-    left: 363px;
     background: none;
     border: none;
     cursor: pointer;
+    justify-content: flex-end;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       display: none;
     }
   }
 
-  &__burger-menu {
+  &__burgerMenu {
     width: 25px;
     height: 16px;
     background: none;
     border: none;
-
-    @media (min-width: 1024px) {
-      position: static;
-      width: auto;
-      height: auto;
-      background: none;
-      backdrop-filter: none;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 40px;
-    }
   }
 
-  /* Меню */
   &__menu {
     position: fixed;
     top: 0;
@@ -89,18 +74,8 @@
     padding: 20px;
     z-index: 1000;
 
-    @media (min-width: 1024px) {
-      position: static;
-      display: flex;
-      flex-direction: row; // Делаем горизонтальным
-      align-items: center;
-      justify-content: flex-end; // Выравниваем по правому краю
-      width: auto;
-      height: auto;
-      background: none;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      gap: 40px;
+    @media (min-width: 1440px) {
+      display: none;
     }
   }
 
@@ -113,6 +88,10 @@
     border: none;
     cursor: pointer;
     z-index: 10;
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
 
     img {
       width: 22px;
@@ -129,7 +108,7 @@
     gap: 40px;
     min-height: 100%;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       flex-direction: row;
       gap: 40px;
     }
@@ -153,6 +132,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
   }
 
   &__menuButtons {
@@ -160,8 +140,9 @@
     gap: 15px;
     margin-top: 20px;
 
-    @media (min-width: 1024px) {
-      margin-left: auto;
+    @media (min-width: 1440px) {
+      margin: 0;
+      margin-left: 184px;
       gap: 20px;
     }
   }
@@ -222,6 +203,17 @@
         #0f9d41 100%
       );
       border: 1px solid #0f9d41;
+    }
+  }
+
+  &__menuDesktop {
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 40px;
     }
   }
 }

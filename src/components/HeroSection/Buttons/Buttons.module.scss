@@ -5,7 +5,12 @@
   gap: 15px;
   margin-top: 40px;
 
-  &__button {
+  @media (min-width: 1440px) {
+    justify-content: flex-start;
+  }
+
+  &__affiliate,
+  &__advertiser {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,20 +22,11 @@
     height: 60px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    min-width: 170px; /* добавил для консистентности */
 
-    &--affiliate {
-      background: transparent;
-      border: 1px solid #0f9d41;
-      color: #fff;
-      min-width: 170px;
-    }
-
-    &--advertiser {
-      background: transparent;
-      border: 1px solid #0f9d41;
-      color: #fff;
-      min-width: 187px;
-    }
+    border: 1px solid #0f9d41;
+    color: #fff;
+    background: transparent;
 
     &:hover {
       background: radial-gradient(
@@ -40,5 +36,9 @@
         #0f9d41 100%
       );
     }
+  }
+
+  &__advertiser {
+    min-width: 187px;
   }
 }

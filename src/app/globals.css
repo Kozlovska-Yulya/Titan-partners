@@ -55,9 +55,12 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: url('/background.svg') no-repeat center/cover;
+
+  @media (min-width: 1440px) {
+    background: url('/background1440.svg') no-repeat center/cover;
+  }
 }
 
 .secondBlock {

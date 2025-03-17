@@ -27,6 +27,9 @@ const HeroSection = () => {
         <Buttons />
         <SocialIcons />
       </div>
+      <div className={styles.heroSection__scrollArrow}>
+        <Image src="/arrow-down.svg" alt="Scroll Down" width={65} height={65} />
+      </div>
     </section>
   );
 };

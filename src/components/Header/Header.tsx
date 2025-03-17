@@ -27,6 +27,7 @@ const Header = () => {
             className={styles.header__logo}
           />
         </Link>
+
         <button className={styles.header__burgerButton} onClick={toggleMenu}>
           <Image
             src="/burger.svg"
@@ -101,6 +102,46 @@ const Header = () => {
           </nav>
         </div>
       )}
+
+      <div className={styles.header__menuDesktop}>
+        <nav className={styles.header__menuContent}>
+          <a href="#for-affiliates" className={styles.header__menuLink}>
+            Affiliates
+          </a>
+          <a href="#for-advertisers" className={styles.header__menuLink}>
+            Advertisers
+          </a>
+          <div className={styles.header__menuContact}>
+            <Image src="/telegram.svg" alt="Telegram" width={20} height={20} />
+            <a
+              href="https://t.me/Titan_partners"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.header__menuLink}
+            >
+              Contact Us
+            </a>
+          </div>
+          <div className={styles.header__menuButtons}>
+            <a
+              href="https://panel.titanpartners.io/signup/affiliate"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.header__signUp}
+            >
+              Sign Up
+            </a>
+            <a
+              href="https://panel.titanpartners.io/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.header__login}
+            >
+              Login
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 };
