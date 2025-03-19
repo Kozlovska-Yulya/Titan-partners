@@ -1,15 +1,11 @@
-.discount {
+.discounts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   width: 100%;
-
-  @media (min-width: 1440px) {
-    margin-top: 100px;
-    max-width: 1440px;
-    width: 100%;
-  }
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
 
   &__title {
     max-width: 388px;
@@ -18,6 +14,7 @@
     font-weight: 700;
     color: #fff;
     line-height: 40px;
+    margin-bottom: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -30,11 +27,81 @@
       white-space: normal;
       display: inline-block;
     }
+
+    span {
+      color: #17d75b;
+    }
   }
 
-  &__highlight {
-    font-size: 30px;
+  &__carousel {
+    width: 100%;
+    overflow: hidden;
+    max-width: 250px;
+  }
+
+  &__track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  &__partner {
+    width: 92px;
+    height: 25px;
+  }
+
+  &__percentage {
+    font-size: 50px;
     font-weight: 700;
+    color: #17d75b;
+
+    @media (min-width: 1440px) {
+      font-size: 60px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
     background: linear-gradient(
       180deg,
       #0f9d41 0%,
@@ -43,156 +110,50 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    @media (min-width: 1440px) {
-      font-size: 50px;
-    }
-  }
-
-  &__carousel {
-    width: 200px * 2;
-    overflow: hidden;
-    position: relative;
-
-    @media (min-width: 1440px) {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  &__track {
-    display: flex;
-    gap: 10px;
-    width: calc(200px * 10);
-
-    @media (min-width: 1440px) {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      justify-content: center;
-    }
-  }
-
-  &__card {
-    width: 200px;
-    height: 310px;
-    border-radius: 31px;
-    backdrop-filter: blur(38.91px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-    color: #fff;
-    text-align: center;
+    text-decoration: none;
+    border-bottom: 0.27px solid;
+    border-image-source: linear-gradient(
+      180deg,
+      #0f9d41 0%,
+      #17d75b 49.82%,
+      #0f9d41 100%
+    );
+    border-image-slice: 1;
     transition:
-      transform 0.3s ease-in-out,
-      box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(23, 215, 91, 0.3);
-    background: url('/backgr-discount.svg');
-
-    @media (min-width: 1440px) {
-      width: 260px;
-      height: 400px;
-    }
+      opacity 0.3s,
+      text-shadow 0.3s;
+    padding-bottom: 10px;
+    cursor: default; /* Запрещаем клик */
+    pointer-events: none;
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(23, 215, 91, 0.5);
+      opacity: 0.7;
     }
   }
 
   &__arrow {
     margin-left: 5px;
-  }
-
-  &__logo {
-    margin-top: 30px;
-    top: 31.13px;
-    left: 64px;
-    object-fit: contain;
-  }
-
-  &__percent {
-    height: 56px;
-    font-size: 47px;
-    font-weight: 700;
-    line-height: 121%;
-    text-align: center;
-    background: linear-gradient(
-      180deg,
-      #0f9d41 0%,
-      #17d75b 49.82%,
-      #0f9d41 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-image-slice: 1;
-    transition:
-      opacity 0.3s,
-      text-shadow 0.3s;
-  }
-
-  // ЗАГЛУШКА
-  &__link {
-    // width: 88px;
-    // height: 17px;
-    // font-size: 14px;
-    // font-weight: 500;
-    // background: linear-gradient(
-    //   180deg,
-    //   #0f9d41 0%,
-    //   #17d75b 49.82%,
-    //   #0f9d41 100%
-    // );
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // text-decoration: none;
-    // border-bottom: 0.37px solid;
-    // border-image-source: linear-gradient(
-    //   180deg,
-    //   #0f9d41 0%,
-    //   #17d75b 49.82%,
-    //   #0f9d41 100%
-    // );
-    // border-image-slice: 1;
-    // transition:
-    //   opacity 0.3s,
-    //   text-shadow 0.3s;
-    // margin-top: 10px;
-    // transition: opacity 0.3s;
-
-    // &:hover {
-    //   opacity: 0.7;
-    // }
-    margin-bottom: 22px;
-    pointer-events: none;
-    text-decoration: none;
-    opacity: 0.5;
-    cursor: default;
+    width: 8px;
+    height: 8px;
   }
 
   &__dots {
     display: flex;
     justify-content: center;
-    gap: 11px;
-    margin-top: 30px;
-
-    @media (min-width: 1440px) {
-      display: none;
-    }
+    gap: 8px;
+    margin-top: 15px;
   }
 
   &__dot {
-    width: 5px;
-    height: 5px;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 8px;
+    height: 8px;
+    background-color: #666;
     border-radius: 50%;
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
 
-    &.active {
-      background-color: #17d75b;
-    }
+  /* Активная точка */
+  &__dot.active {
+    background-color: #17d75b;
   }
 }

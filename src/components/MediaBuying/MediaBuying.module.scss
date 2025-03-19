@@ -103,6 +103,7 @@
   &__item {
     display: flex;
     gap: 15px;
+    align-items: center;
 
     @media (min-width: 1440px) {
       width: 589px;

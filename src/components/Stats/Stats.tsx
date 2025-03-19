@@ -5,32 +5,30 @@ import { motion } from 'framer-motion';
 import styles from './Stats.module.scss';
 
 const statsData = [
-  { value: '5000+', text: 'websites created' },
-  { value: '30+', text: 'amount of geodata' },
-  { value: '20 000+', text: 'attracted players' },
+  { value: '5000+', text: 'websites created', image: '/5000+.png' },
+  { value: '30+', text: 'amount of geodata', image: '/30+.png' },
+  { value: '20 000+', text: 'attracted players', image: '/20000+.png' },
 ];
 
 const Stats = () => {
   return (
     <div className={styles.stats}>
-      <div className={styles.stats__decorations}>
-        <Image
-          src="/decor-left.svg"
-          alt="Decor Left"
-          width={80}
-          height={80}
-          className={styles.stats__decorLeft}
-          priority
-        />
-        <Image
-          src="/decor-right.svg"
-          alt="Decor Right"
-          width={80}
-          height={80}
-          className={styles.stats__decorRight}
-          priority
-        />
-      </div>
+      <Image
+        src="/decor-left.svg"
+        alt="Decor Left"
+        width={100}
+        height={100}
+        className={styles.stats__decorLeft}
+        priority
+      />
+      <Image
+        src="/decor-right.svg"
+        alt="Decor Right"
+        width={100}
+        height={100}
+        className={styles.stats__decorRight}
+        priority
+      />
       <div className={styles.stats__container}>
         {statsData.map((stat, index) => (
           <motion.div
@@ -40,6 +38,13 @@ const Stats = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: index * 0.2, duration: 0.5, ease: 'easeOut' }}
           >
+            <Image
+              src={stat.image}
+              alt={`Card ${index + 1}`}
+              fill
+              className={styles.stats__background}
+            />
+
             <div className={styles.stats__content}>
               <motion.span
                 className={styles.stats__value}
@@ -50,6 +55,7 @@ const Stats = () => {
               </motion.span>
               <p className={styles.stats__text}>{stat.text}</p>
             </div>
+
             <Image
               src="/arrow.svg"
               alt="Arrow"
